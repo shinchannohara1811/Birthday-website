@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Simran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="frame">
+    <header class="topbar">
+      <div class="back">‹</div>
+      <h1>Happy Birthday, Simran 💖</h1>
+      <div class="menu">⋮</div>
+    </header>
+
+    <main>
+      <section class="card intro">
+        <div class="badge">🎉</div>
+        <small>Happy Birthday!</small>
+        <h2>Happy Birthday, Beautiful! ✨</h2>
+        <p>Today is all about celebrating the most amazing person in my world. I've made this just for you ❤️</p>
+        <button class="btn primary" id="startBtn">Let's Gooo</button>
+      </section>
+
+      <section class="card letter">
+        <h3>Final Birthday Letter</h3>
+        <p class="muted">A special message sealed with love 💕</p>
+
+        <div class="letter-box">
+          <div class="letter-header"><span class="icon">📩</span> Final Birthday Love Letter</div>
+          <p class="letter-text"><em>My dearest birthday princess,</em><br> May this new year bring you everything your heart desires... Happy Birthday, my love.</p>
+          <div class="sticker">😺</div>
+          <button class="btn seal" id="sealBtn">Seal The Letter ✨</button>
+        </div>
+      </section>
+
+      <section class="card wishes">
+        <h3>Birthday Wishes Cards</h3>
+        <p class="muted">Click each card to reveal a birthday message</p>
+
+        <div class="cards-row">
+          <div class="wish-card" data-back="Happy Birthday to the girl who makes every day feel like a celebration! 🎊">
+            <div class="wish-front">Tap to flip</div>
+            <div class="wish-back"></div>
+          </div>
+
+          <div class="wish-card" data-back="Another year of being absolutely incredible, beautiful, and perfect just for you 💕">
+            <div class="wish-front">Tap to flip</div>
+            <div class="wish-back"></div>
+          </div>
+
+          <div class="wish-card image-card" data-back="Surprise!">
+            <div class="wish-front emoji">🧁</div>
+            <div class="wish-back"></div>
+          </div>
+        </div>
+
+        <div class="progress-row">
+          <div class="progress-track"><div class="progress-fill" id="wishProgress" style="width:33%"></div></div>
+          <small id="progressText">2 of 3 birthday wishes unlocked — keep going 🎉</small>
+        </div>
+      </section>
+
+      <section class="card cake">
+        <h3>It's Cake Time! 🎂</h3>
+        <p class="muted">Make your birthday wish come true — draw a line across the cake to cut it</p>
+
+        <div class="cake-area">
+          <div class="cake-plate">
+            <div class="candle">🕯️</div>
+            <div class="cake-body" id="cakeBody">
+              <div class="cut-line" id="cutLine"></div>
+            </div>
+          </div>
+
+          <div class="cut-controls">
+            <div class="slider" id="cutSlider" tabindex="0" aria-label="Cut slider">
+              <div class="knob" id="knob"></div>
+            </div>
+            <button class="btn" id="tryCut">Try Cut</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card music">
+        <h3>Birthday Vibes Playlist 🎵</h3>
+        <p class="muted">Songs to celebrate your special day</p>
+
+        <div class="carousel">
+          <button class="nav left" id="prev">‹</button>
+          <div class="carousel-track" id="carousel">
+            <div class="music-card" data-src="">
+              <div class="album">🎧</div>
+              <div class="song">Dil Ka Jo Haal Hai</div>
+              <div class="small">Here's to making this year unforgettable ✨</div>
+              <button class="btn play">Play</button>
+            </div>
+
+            <div class="music-card" data-src="">
+              <div class="album">🎶</div>
+              <div class="song">Birthday Mashup</div>
+              <div class="small">My little playlist for you ❤️</div>
+              <button class="btn play">Play</button>
+            </div>
+
+            <div class="music-card" data-src="">
+              <div class="album">💿</div>
+              <div class="song">Sweet Moments</div>
+              <div class="small">Close your eyes and enjoy</div>
+              <button class="btn play">Play</button>
+            </div>
+          </div>
+          <button class="nav right" id="next">›</button>
+        </div>
+
+        <button class="btn primary continue" id="continueBtn">Continue to Birthday Surprises ✨</button>
+      </section>
+    </main>
+
+    <footer class="bottom">
+      <button class="btn ghost" id="openScanner">Open Cute Scanner 🔍</button>
+      <small>Made with endless love for your special day 💕</small>
+    </footer>
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <div id="scannerModal" class="modal hidden">
+    <div class="scanner-card">
+      <div class="scanner-top">
+        <div class="scan-title">Scan Me 💖</div>
+        <div class="close" id="closeScanner">✕</div>
+      </div>
+
+      <div class="scan-frame">
+        <div class="cute-sticker">😺</div>
+        <div class="scan-window">
+          <div class="scan-bar" id="scanBar"></div>
+        </div>
+        <div class="scan-hint">Place QR inside the frame</div>
+        <button class="btn" id="fakeScanBtn">Simulate Scan</button>
+      </div>
+
+      <div class="scan-result hidden" id="scanResult">
+        <div class="qr-icon">🔗</div>
+        <div>Scanned! <a href="#" id="scannedLink">Open Surprise</a></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
